@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kablammo&family=MuseoModerno:wght@200&family=Quicksand:wght@300&family=Staatliches&display=swap');
+
+:root {
+    --fondo: #fff;
+    --titulos: 33px;
+    --margenes: 60px;
+    --espacios: 10px;
+    --espacios-contenido: 45px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* font-family: 'Banaue', sans-serif; */
+    font-family: 'MuseoModerno', cursive;
+}
+
+body {
+    background-color: #dbdbdb;
+}
+
+img {
+    vertical-align: top;
+}
+
+/*Preloader*/
+
+.hidden {
+    overflow: hidden;
+}
+
+.centrado {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #cef;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
+/* fin del preloader */
+
+header {
+    background: #F05635;
+    color: #F0EDE3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    z-index: 10;
+    box-shadow: 0px 0px 10px #E47C61;
+}
+
+nav {
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+.nav1 {
+    background: transparent;
+    height: 100px;
+    color: #f2f2f2;
+}
+
+.nav2 {
+    background: var(--fondo);
+    height: 110px;
+    color: #1B1617;
+}
+
+.contenedor-nav {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    height: inherit;
+    overflow: hidden;
+}
+
+nav .enlaces a {
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 23px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: inherit;
+}
+
+nav .enlaces a:hover {
+    border-bottom: 3px solid #1fde82;
+    transition: 0.6s;
+    color: #1fde82;
+}
+
+
+.logo img {
+    width: 280px;
+    align-items: center;
+}
+
+.icono {
+    display: none;
+    font-size: 24px;
+    padding: 23.5px 20px;
+}
+
+/* fin del header */
+/* 
+#sobre-mi{
+    color: #f2f2f2;
+    background-color: #1B1617;
+}
+.yo{
+    padding: 60px;
+}
+#sobre-mi img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#sobre-mi p {
+    font-size: 21px;
+} */
+
+/*encabezado*/
+.encabezado {
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.contenido-header {
+    width: 100%;
+    height: 620px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.textos-header {
+    margin: 30px 0 0 30px;
+}
+
+.textos-header h1{
+    font-size: 70px;
+}
+
+.contenido-header p {
+    font-weight: 100;
+    margin-top: 14px;
+    color: #5d6678;
+}
+
+.contenido-header img {
+    width: 100%;
+    animation: ease-in animat 1s;
+    overflow: hidden;
+}
+
+@keyframes animat {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para la sección "Proyectos" */
+#proyectos{
+    background-color: #1B1617;
+    padding: 30px;
+}
+#proyectos h2,h3,p{
+    color: #F0EDE3;
+}
+#proyectos>h2{
+    font-size: 50px;
+}
+#proyectos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+#proyectos li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#proyectos h3 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#proyectos p{
+    font-size: 20px;
+}
+
+#proyectos a {
+    display: block;
+    text-decoration: none;
+    color: #F05635;
+    margin-top: 10px;
+}
+.fox{
+    width: 90%;
+}
+.moyo{
+    width: 90%;
+}
+
+/*Segunda seccion About us*/
+.titulo {
+    font-size: 50px;
+}
+/*Segunda seccion About us*/
+.contenedor1 {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.contenedor-articulo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.articulo {
+    width: 29%;
+    background: #F0EDE3;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+
+.zoom-in-right {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+    transition-timing-function: ease;
+    transition-duration: .4s;
+    transition-property: opacity, transform;
+}
+
+.articulo:hover {
+    box-shadow: 0 4px 10px #F05635;
+}
+
+.articulo>img {
+    color: #F0EDE3;
+    background: #E47C61;
+    display: inline-block;
+    width: 60%;
+    border-radius: 20%;
+    box-shadow: 0 8px 32px rgba(222, 133, 31, 0.484);
+}
+
+.articulo h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    color: #1F1C1D;
+}
+
+.articulo p {
+    font-weight: 100;
+    color: #291919;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+/*Results*/
+/* Galeria */
+.results {
+    background: #1B1617;
+    padding: 10px;
+}
+.fotos {
+    margin: 10px;
+    padding: 1em;
+}
+.fotos h2{
+    font-size: 50px;
+    text-align: center;
+    color: #F0EDE3;
+}
+
+.carrusel {
+    width: 50%;
+    max-width: 120em;
+    color: #1D1719;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #ececec;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-left: 320px;
+
+}
+
+.carrusel .grande {
+    width: 990%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #1D1719;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #F0EDE3;
+    box-shadow: 1em 1em 2em #c9c9c9, -1em -1em 2em #E47C61, inset 0 0 0 transparent, inset 0 0 0 transparent;
+
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+.carrusel .img {
+    width: calc(100% / 10 - 8em);
+    min-height: 10vh;
+    color: #1D1719;;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #F0EDE3;
+    box-shadow: 1em 1em 2em #c9c9c9, -1em -1em 2em, inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+
+.carrusel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding-bottom: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.carrusel .punto {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1em 1em 0;
+    color: #1D1719;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #ececec;
+    box-shadow: 0.6em 0.6em 1.2em #c9c9c9, -0.6em -0.6em 1.2em #5d6678, inset 0 0 0 transparent, inset 0 0 0 transparent;
+
+}
+.carrusel .punto.activo {
+    background-color: #F05635;
+}
+
+/*Services*/
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1F1C1D;
+    width: 100%;
+    padding: 20px;
+}
+/* Estilos para la sección "Contacto" */
+
+form {
+    width: 600px;
+    margin: 0 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px #c9c9c9;
+    border-radius: 10%;
+}
+
+form>h2 {
+    color: #E47C61;
+    font-size: 50px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    color: #F05635;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    padding: 17px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: #EDFFF0;
+    border: 2px solid #F0FAF1;
+    color: #f2f2f2;
+    outline: none;
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #1B1617;
+}
+
+.form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-txt a {
+    color: #E47C61;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-txt p{
+    color: #E47C61;
+}
+
+.btn {
+    font-size: 16px;
+    color: #ffff;
+    border: 0;
+    border-radius: 20px;
+    background-color: #E47C61;
+    box-shadow: 0 0 20px #F05635;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c74f32;
+}
+
+/*Footer*/
+footer {
+    background: #e3e3e3;
+    padding: 20px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    box-shadow: 0 0 10px 0 #F0EDE3;
+}
+
+.partFooter {
+    width: 20%;
+    text-align: center;
+}
+
+.partFooter h4 {
+    color: #1F1C1D;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.partFooter a {
+    display: block;
+    text-decoration: none;
+    color: #977569;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.partFooter a:hover {
+    color: #F05635;
+}
+
+.partFooter img {
+    width: 50%;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 5px;
+    transition: all ease-in-out .3s;
+    flex-direction: row;
+}
+
+.media {
+    display: inline-block;
+    justify-content: center;
+    color: #977569;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 5px;
+    transition: all ease-in-out .3s;
+}
+
+.media img {
+    width: 100%;
+}
+
+.facebook:hover {
+    background-color: #38569e;
+    border-radius: 20%;
+}
+
+.linked:hover {
+    background-color: #0a66d8;
+    border-radius: 20%;
+}
+
+.insta:hover {
+    background-color: #17d023;
+    border-radius: 20%;
+}
+
+.youtube:hover {
+    background-color: #ff0202;
+    border-radius: 20%;
+}
+
+footer p {
+    margin-top: var(--espacios);
+    color: #5d6678;
+}
+
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .nav2 {
+        color: #fff;
+    }
+
+    .icono {
+        display: block;
+        cursor: pointer;
+    }
+
+    .enlaces {
+        position: fixed;
+        top: 80px;
+        background: #0e1d2df6;
+        left: 0;
+        height: 100%;
+        transition: 1s;
+        width: 0;
+        overflow: hidden;
+    }
+
+    .enlaces a {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+    }
+    .textos-header h1{
+        font-size: 38px;
+    }
+    nav .enlaces a:hover {
+        border-bottom: 3px solid #F05635;
+        transition: 0.6s;
+        color: #F05635;
+    }
+    /* #sobre-mi p {
+        font-size: 18px;
+    } */
+
+    :root {
+        --margenes: 30px;
+    }
+    .survival-vid{
+        width: 320px;
+        height: auto;
+    }
+    .contenido-header{
+        padding-top: 100px;
+        display: block;
+        text-align: center;
+    }
+
+    .contenido-header img{
+        width: 55%;
+        padding-top: 30px;
+        margin-left: 50px;
+    }
+    
+    /*About us*/
+
+    .articulo {
+        width: 45%;
+    }
+
+    .articulo h3{
+        font-size: 17px;
+    }
+    /* Galeria */
+    .carrusel{
+        width: 100%;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+
+    .carrusel .punto{
+        width: 10px;
+        height: 10px;
+    }
+
+    /*Services*/
+
+    .services {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    form{
+        width: 100%;
+        box-shadow: 0 0 10px #1B1617;
+        margin: 0 30px;
+    }
+
+    .input-group{
+        width: 70%;
+    }
+
+    /* Footer */
+    footer {
+        justify-content: space-evenly;
+    }
+
+    .partFooter {
+        width: 40%;
+        margin-bottom: 40px;
+    }
+
+    footer p {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    :root {
+        --espacios-contenido: 25px;
+    }
+
+    .survival-vid{
+        width: 280px;
+    }
+
+    /* footer */
+    .partFooter {
+        width: 95%;
+        margin-bottom: 40px;
+    }
+
+    footer p {
+        margin-left: 12px;
+    }
+}
